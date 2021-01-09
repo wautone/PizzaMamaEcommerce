@@ -2,11 +2,19 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}{% endblock %} | PizzaMama La passion des pizzas</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/pizzamama.css') }}">
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+    <div class="menunav">
+        <img id="small_logo" src="{{ asset('assets/images/small_logo.png') }}" alt="Logo Pizza Mama">
+        <a class="nav_list" href="">Accueil</a>
+        <a class="nav_list" href="">Menu</a>
+        <a class="nav_list" href="">Webshop</a>
+        <a class="nav_list" href="">Contact</a>
+    </div>
+        {% block content %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
